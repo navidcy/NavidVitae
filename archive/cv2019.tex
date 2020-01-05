@@ -1,0 +1,581 @@
+% !TEX program = xelatex
+% !TEX encoding = UTF-8
+
+%---------------------------------------
+% Navid Constantinou
+%
+% URL: http://www.navidconstantinou.com/
+%---------------------------------------
+
+
+\documentclass[10pt, letter]{article}
+\usepackage{fontspec}
+%\usepackage{academicons}
+\usepackage{fontawesome}
+\usepackage{fancyhdr,lastpage}
+\usepackage{verbatim,placeins}
+
+
+\def\www{http://www.navidconstantinou.com}
+
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usetikzlibrary{calc}
+
+\usepackage{comment}
+
+% DOCUMENT LAYOUT
+\usepackage{geometry}
+%\geometry{a4paper, textwidth=5.5in, textheight=9in, marginparsep=7pt, marginparwidth=.6in}
+%\geometry{a4paper, top=2cm,bottom=2.5cm,left=2cm,right=2cm,marginparsep=5mm, marginparwidth=15mm,includemp}
+\setlength\parindent{0in}
+
+\pagestyle{fancy}
+\lhead{CV} \rhead{\today}
+\chead{{\large{\bf Navid C. Constantinou}}}
+
+\lhead{} \rhead{}
+\chead{}
+\fancyhf{} % sets both header and footer to nothing
+\renewcommand{\headrulewidth}{0pt}
+% your new footer definitions here
+
+
+\lfoot{} \cfoot{\thepage~/~\pageref*{LastPage}} \rfoot{}
+
+
+
+% FONTS
+\usepackage{xcolor}
+\definecolor{jhublue}{RGB}{0,105,175}
+\definecolor{mylightred}{RGB}{211,79,73}
+\definecolor{mydarkred}{RGB}{199,44,38}
+\definecolor{mylightgreen}{RGB}{78,153,67}
+\definecolor{mydarkgreen}{RGB}{43,129,33}
+\definecolor{mylightpurple}{RGB}{150,107,178}
+\definecolor{mydarkpurple}{RGB}{126,78,160}
+\definecolor{mylightblue}{RGB}{49,101,205}
+\definecolor{mydarkblue}{RGB}{20,92,205}
+
+\usepackage{xunicode}
+\usepackage{xltxtra}
+\defaultfontfeatures{Mapping=tex-text}
+\setromanfont [Ligatures={Common},Variant=01]{Linux Libertine}
+%\setromanfont [Ligatures={Common}, BoldFont={Gentium Basic Bold}, ItalicFont={Gentium Basic Italic}]{Gentium Basic}
+\setmonofont[Scale=0.7]{Monaco}
+%\setromanfont[Ligatures={Common}, SmallCapsFont={OfficinaSanITC-BookSC}, BoldFont={OfficinaSanITC-MediumOS}, ItalicFont={Officina Serif ITC Book Italic OS}]{Officina Serif ITC Book}
+%\setmonofont[Scale=0.7]{Monaco}
+\setsansfont [Ligatures={Common}, SmallCapsFont={HoeflerText-Regular}, BoldFont={HoeflerText-Black}, ItalicFont={HoeflerText-Italic}]{Hoefler Text}
+% \newfontfamily{\AI}{Academicons.ttf}
+
+% ---- CUSTOM COMMANDS
+\newcommand{\amper}{{\fontspec[Scale=.95]{Adobe Caslon Pro}\selectfont\itshape\&}}
+%\newcommand{\amper}{{\fontspec[Scale=.95]{Linux Libertine O}\selectfont}}
+\newcommand{\html}[1]{\href{#1}{\scriptsize\textsc{[url]}}}
+\newcommand{\urllink}[1]{\href{#1}{\scriptsize\textsc{[url]}}}
+\newcommand{\pdf}[1]{\href{#1}{\scriptsize\textsc{[pdf]}}}
+\renewcommand{\pdf}[1]{\href{#1}{{\fontspec{FontAwesome}{}}}}
+\newcommand{\doi}[1]{\href{#1}{\scriptsize\textsc{[doi]}}}
+\renewcommand{\doi}[1]{\href{#1}{{\fontspec{Academicons}{}}}}
+
+
+
+\newcommand{\arxiv}[1]{\href{#1}{\scriptsize[arXiv]}}
+\newcommand{\pji}{\href{http://users.uoa.gr/~pjioannou/}{{\color{black}Petros J. Ioannou}}}
+\newcommand{\wryoung}{\href{http://pordlabs.ucsd.edu/wryoung/}{{\color{black}William R. Young}}}
+\newcommand{\amhogg}{\href{http://rses.anu.edu.au/people/academics/prof-andy-hogg/}{{\color{black}Andy Hogg}}}
+\newcommand{\leventis}{\href{http://www.leventisfoundation.org}{{\color{black}A. G. Leventis Foundation}}}
+\newcommand{\onassis}{\href{http://www.onassis.gr}{{\color{black}Alexander S. Onassis Foundation}}}
+\newcommand{\ekpa}{National \& Kapodistrian University of Athens}
+\newcommand{\UBonn}{\href{http://pi.physik.uni-bonn.de}{{\color{black}Rheinische Friedrich-Wilhelms Universit\"at}}}
+\newcommand{\scripps}{
+\href{https://scripps.ucsd.edu}{\color{black}Scripps Institution of Oceanography}}
+\newcommand{\rses}{
+\href{http://rses.anu.edu.au}{\color{black}Research School of Earth Sciences}}
+\newcommand{\clex}{
+\href{http://climateextremes.org.au}{\color{black}ARC Centre of Excellence for Climate Extremes}}
+\newcommand{\anu}{
+\href{http://www.anu.edu.au}{\color{black}Australian National University}}
+\newcommand{\ucsd}{
+\href{http://www.ucsd.edu}{\color{black}University of California San Diego}}
+
+\usepackage[export]{adjustbox}
+
+
+
+
+
+\tikzset{
+  juliadot/.style args={#1,#2}{shape=circle,line width=0.03ex,minimum width=0.4ex,fill=#1,draw=#2}
+}
+
+\newcommand\julialetter[1]{{\strut\fontspec{CMU Sans Serif}\bfseries\selectfont{#1}}}
+
+\DeclareRobustCommand\julia{%
+\begin{tikzpicture}[baseline=0mm, every node/.style={inner sep=0mm, outer sep=0mm}]
+\node[anchor=base]        (j) at (0,0) {\julialetter{\j}};
+\node[anchor=base, right=0ex of j] (u) {\julialetter{u}};
+\node[anchor=base, right=0ex of u] (l) {\julialetter{l}};
+\node[anchor=base, right=0ex of l] (i) {\julialetter{\i}};
+\node[anchor=base, right=0ex of i] (a) {\julialetter{a}};
+\path let \p1 = (j) in node[juliadot={mylightblue,mydarkblue}] (bluedot) at (\x1+0.02ex,1.4ex) {};
+\path let \p1 = (i) in node[juliadot={mylightred,mydarkred}] (reddot) at (\x1,1.4ex) {};
+\path let \p1 = (reddot) in node[juliadot={mylightpurple,mydarkpurple}] (purpledot) at (\x1+0.5ex,\y1) {};
+\path let \p1 = (reddot) in node[juliadot={mylightgreen,mydarkgreen}] (greendot) at (\x1+0.25ex,\y1+0.42ex) {};
+\end{tikzpicture}%
+}
+
+
+
+%\usepackage{placeins}
+
+\usepackage{marginnote}
+\newcommand{\years}[1]{\marginnote{\scriptsize #1}}
+\renewcommand*{\raggedleftmarginnote}{}
+%\setlength{\marginparsep}{7pt}
+\reversemarginpar
+
+\geometry{top=2cm,bottom=2.2cm,left=2.05cm,right=2.05cm,marginparsep=2mm, marginparwidth=15mm,includemp}
+
+
+% HEADINGS
+\usepackage{sectsty}
+\usepackage[normalem]{ulem}
+\sectionfont{\mdseries\upshape\Large}
+\subsectionfont{\mdseries\scshape\normalsize}
+\subsubsectionfont{\mdseries\upshape\large}
+
+% PDF SETUP
+% ---- FILL IN HERE THE DOC TITLE AND AUTHOR
+\usepackage[bookmarks, colorlinks, breaklinks, pdftitle={Navid C. Constantinou - vita},pdfauthor={Navid Constantinou}]{hyperref}
+\hypersetup{linkcolor=blue,citecolor=blue,filecolor=black,urlcolor=jhublue}
+
+
+\begin{document}
+\reversemarginpar
+{\huge{ \href{http://www.navidconstantinou.com}{\color{jhublue}\bf Navid C. Constantinou}}}\\[.42cm]
+\parbox{.57\linewidth}{
+\clex\\
+\rses\\
+\anu, Australia\\
+\mbox{}\\
+%\href{http://wikimediafoundation.org}{wikimediafoundation.org}\\
+}
+\parbox{.43\linewidth}{
+%\textsc{t}\quad\texttt{+30-6972778295} (\textsc{gr})\\
+{\fontspec{Arial Unicode MS}{✉}}\hspace{.26cm}\href{mailto:navid.constantinou@anu.edu.au}{navid.constantinou@anu.edu.au}\\
+\textsc{w}\hspace{.24cm}\href{\www}{www.navidconstantinou.com}\\
+\faGithub\hspace{.24cm}\href{https://github.com/navidcy}{navidcy}\hspace{3.9em}\faVimeo\hspace{.24cm}\href{https://vimeo.com/navidcy}{navidcy}\\
+{\fontspec{Academicons}{}}\hspace{.24cm}\href{http://orcid.org/0000-0002-8149-4094}{0000-0002-8149-4094}\\
+{\fontspec{Academicons}{}}\hspace{.24cm}\href{https://arxiv.org/a/constantinou_n_1.html}{arXiv/a/constantinou\_n\_1}}
+
+
+
+
+
+
+% \renewcommand{\tabcolsep}{0cm}
+%
+%
+% \begin{tabular*}{2in}{l@{\extracolsep{\fill}}c@{\extracolsep{\fill}}l}
+% %{Gender}  & : & Male\\
+% {Birthdate}  & : & 23 February 1984\\
+% {Nationality} & : & Cypriot (\textsc{\href{http://en.wikipedia.org/wiki/Cyprus}{\color{black}cy}})\\%\textbf{Religion} & : & None\\
+% %{Family status} & : & Single\\
+% \end{tabular*}
+%
+% \vspace{0.15in}
+
+
+
+
+
+
+%\vspace{-2em}\section*{Areas of specialization}%Philosophy of psychology\\[.2cm]
+%\begin{itemize}
+%\item Atmospheric sciences
+%\item Fluid dynamics
+%\item Transition to turbulence
+%\item Hydrodynamic stability
+%\item  Dynamical systems
+%\end{itemize}
+
+%\vspace{-2em}\section*{Areas of specialization}%Philosophy of psychology\\[.2cm]
+%\begin{itemize}
+%\item Atmospheric sciences
+%\item Fluid dynamics
+%\item Transition to turbulence
+%\item Hydrodynamic stability
+%\item  Dynamical systems
+%\end{itemize}
+
+%
+%\subsubsection*{Areas of specialization}%Philosophy of psychology\\[.2cm]
+%Atmospheric sciences •  Fluid dynamics • Transition to turbulence • Hydrodynamic stability • Dynamical systems
+
+
+%\hrule
+
+
+
+%{\small \textsc{supervisor:} \pji }\\
+%{\small \textsc{thesis:} Formation of large-scale structures by turbulence in rotating planets}\\
+%{\small\textsc{research areas:} Atmospheric sciences, fluid dynamics, transition to turbulence, hydrodynamic stability, linear and nonlinear systems}
+%
+%
+
+
+%\hrule
+\section*{\bf Interests}
+
+\noindent Geophysical fluid dynamics, physical oceanography, atmospheric dynamics, climate dynamics, fluid mechanics\\[.2cm]
+
+
+\vspace{-2em}\section*{\bf Education}
+
+
+\noindent\years{Oct. 2010 -- \\ \mbox{$\;\;\;$}Feb. 2015}\textbf{Ph.D.~in Physics}\\
+\emph{\ekpa, Greece}\\
+{\small
+\begin{tabular*}{\textwidth}{p{2.4cm}c@{\extracolsep{.25cm}}p{12.1cm}}
+ \textsc{Supervisor}    & : & \pji\\
+\textsc{Thesis} & : &Formation of large-scale structures by turbulence in rotating planets \arxiv{http://arxiv.org/abs/1503.07644} \pdf{\www/theses/PhD_thesis_Navid.pdf}
+\end{tabular*}}\\[.2cm]
+\years{Sep. 2008 -- \\ \mbox{$\;\;\;$}Jun. 2010}\textbf{M.Sc.~in Physics w/ Honors} {({summa cum laude})}\\
+Astrophysics, Astronomy and Mechanics\\\emph{\ekpa, Greece}\\[.2cm]
+% {\small
+% \begin{tabular*}{\textwidth}{p{2.4cm}c@{\extracolsep{.25cm}}p{12.1cm}}
+% \textsc{supervisor}    & : & \pji\\
+% \textsc{thesis} & : &Transient energy growth in Holmboe instabilities \pdf{\www/theses/MSc_thesis_Navid.pdf}
+% \end{tabular*}
+% }\\[.2cm]
+\years{Sep. 2003 --\\ \mbox{$\;\;\;$}Jun. 2008}\textbf{B.Sc. in Physics w/ Honors} {(summa cum laude, class of 2008 valedictorian, {9.16/10})}\\
+\emph{\ekpa, Greece}\\
+Exchange through Socrates-Erasmus program during spring semester 2006 at the\\
+\emph{\UBonn}, Bonn, Germany\\[.2cm]
+\years{Jul. 2001 --\\ \mbox{$\;\;\;$}Aug. 2003}\textbf{Cyprus National Guard}\\Military service (obligatory) as Second Lieutenant in Armored Forces, Cyprus\\[.2cm]
+%\years{2001}\textbf{Acropolis Lyceum} {(\emph{19.1/20, Excellent})\\Nicosia, Cyprus
+
+\vspace{-2em}\section*{\bf Experience}
+
+
+
+\noindent\years{May. 2018 -- \\ \mbox{$\;\;\;$}}\textbf{Research Fellow}, part of the  {\href{http://www.climateextremes.org.au}{{\color{black}ARC Centre of Excellence for Climate Extremes}}}\\
+\emph{\href{http://rses.anu.edu.au}{\color{black}Research School of Earth Sciences}, Australian National University} (with \amhogg)\\[.2cm]
+\noindent\years{Sep. 2015 -- \\ \mbox{$\;\;\;$}Apr. 2018}\textbf{Postdoctoral Researcher ({\href{http://vsp.ucar.edu/cgc/class-25}{{\color{black}NOAA Climate \& Global Change Postdoctoral Fellow}}})}\\
+\emph{\scripps, University of California San Diego, USA} (with \wryoung)\\[.2cm]
+% {\small
+% \begin{tabular*}{\textwidth}{p{2.4cm}c@{\extracolsep{.25cm}}p{12.1cm}}
+%  \textsc{supervisor}    & : & \wryoung\\
+% \textsc{project} & : & Statistical state dynamics of the Antarctic Circumpolar Current
+% \end{tabular*}
+% }\\[.2cm]
+\noindent\years{Jun. 2015 -- \\ \mbox{$\;\;\;$}Aug. 2015}\textbf{Visiting Researcher}\\
+\emph{Cyprus Oceanography Center, University of Cyprus}\\[.2cm]
+
+
+\vspace{-2em}\section*{\bf Grants \amper{} Awards}
+
+\noindent\years{2019}\emph{Best paper among Early Career Researchers within {\href{http://www.climateextremes.org.au/publications}{{\color{black}ARC Centre of Excellence for Climate Extremes}}}}\\[.2cm]
+\years{2015-2017}\emph{\href{http://vsp.ucar.edu/cgc/class-25}{{\color{black}NOAA Climate \& Global Change Postdoctoral Fellowship}}} (150,000$\,$USD)\\[.2cm]
+\years{2009-2014}\emph{\onassis}\\Scholarship for the 2\textsuperscript{nd} year of M.Sc. and for 4 years of Ph.D. studies (47,700$\,$USD)\\[.2cm]
+\years{2009-2012}\emph{\leventis}\\Scholarship for the 2\textsuperscript{nd} year of M.Sc. and the first 2 years of Ph.D. studies (16,000$\,$USD)\\[.2cm]
+\years{2003-2006}\emph{Department of Physics, \ekpa, Greece}\\1\textsuperscript{st} student for academic years 2003-04 and 2004-05\\
+Honorary Scholarship for academic year 2005-06\\[.2cm]
+\years{2001}\emph{International Physics Olympiad, June 2001}\\Participation with the national team of Cyprus
+
+
+\vspace{-2em}\section*{\bf Publications}
+
+\subsubsection*{Submitted$\,$/$\,$In Review}
+Lozano-Dur\'an, A., Nikolaidis, M.-A., \textbf{Constantinou, N. C.}, and Karp, M. Alternative physics to understand wall turbulence: Navier--Stokes equations with modified linear dynamics. (submitted on Dec.~2019, arXiv:\href{https://arxiv.org/abs/1912.07532}{1912.07532}) \pdf{\www/publications/multiflow2019-linearmechanism.pdf}\\[.2cm]
+Rocha, C. B., \textbf{Constantinou, N. C.}, Llewellyn Smith, S. G., and  Young, W. R. The heat flux of horizontal convection: definition of the Nusselt number. \emph{J. Fluid Mech.} (submitted on Dec.~2019, arXiv:\href{https://arxiv.org/abs/1912.05229}{1912.05229}) \pdf{\www/publications/HCNuDefinition.pdf}\\[.2cm]
+Lozano-Dur\'an, A., Nikolaidis, M.-A., \textbf{Constantinou, N. C.}, and Karp, M. Wall turbulence without modal instability of the streaks. (submitted on Oct.~2019, arXiv:\href{https://arxiv.org/abs/1909.05490}{1909.05490}) \pdf{\www/publications/ModallyStableTurb.pdf}\\[.2cm]
+
+\vspace{-1.5em}
+
+
+\subsubsection*{In Press$\,$/$\,$Published}
+\textbf{Constantinou, N. C.} and Hogg, A. McC. (2019). Eddy saturation of the Southern Ocean: a baroclinic versus barotropic perspective. \emph{Geophys. Res. Lett.}, \textbf{46}. (in press, doi:\href{https://doi.org/10.1029/2019GL084117}{10.1029/2019GL084117}) \doi{https://doi.org/10.1029/2019GL084117} \pdf{\www/publications/EddySaturation-BC-BT.pdf}\ (Best Early Career Researcher paper within \href{https://climateextremes.org.au/publications/}{CLEx} for year 2019.)\\[.2cm]
+Martínez-Moreno, J., Hogg, A. McC., Kiss, A. E., \textbf{Constantinou, N. C.}, and Morrison, A. K. (2019). Kinetic energy of eddy-like features from sea surface altimetry. \emph{J. Adv. Model. Earth Sy.}, \textbf{11 (10)}, 3090-3105. \doi{https://doi.org/10.1029/2019MS001769} \pdf{\www/publications/TrackEddies-SSH.pdf}\ (Featured in the \href{https://climateextremes.org.au/research-brief-southern-ocean-vortices-are-changing/}{CLEx} press news.)\\[.2cm]
+Parker, J. B. and \textbf{Constantinou, N. C.} (2019). Magnetic eddy viscosity of mean shear flows in two-dimensional magnetohydrodynamics. \emph{Phys. Rev. Fluids}, \textbf{4}, 083701. \doi{https://doi.org/10.1103/PhysRevFluids.4.083701} \pdf{\www/publications/magneticviscosity-2019.pdf}\ (Featured in the \href{https://www.anu.edu.au/news/all-news/wind-mystery-inside-gas-giant-saturn-begins-to-unravel}{ANU} and \href{https://www.llnl.gov/news/jupiter-shows-its-true-stripes}{LLNL} press news.)\\[.2cm]
+Bakas, N. A., \textbf{Constantinou, N. C.}, and Ioannou, P. J. (2019). Statistical state dynamics of weak jets in barotropic beta-plane turbulence. \emph{J. Atmos. Sci.}, \textbf{76 (3)}, 919-945. \doi{https://doi.org/10.1175/JAS-D-18-0148.1} \pdf{\www/publications/SSD_Eckhaus.pdf}\ (Featured in the \href{https://climateextremes.org.au/research-brief-new-understanding-reveals-how-jets-and-cyclones-interact/}{CLEx} press news.)\\[.2cm]
+\textbf{Constantinou, N. C.} and Parker, J. B. (2018). Magnetic suppression of zonal flows on a beta-plane. \emph{Astrophys.~J.}, \textbf{863}, 46. \doi{https://doi.org/10.3847/1538-4357/aace53} \pdf{\www/publications/magneticZF-2018.pdf}\ (Featured in the \href{http://www.anu.edu.au/news/all-news/study-helps-solve-mystery-under-jupiter%E2%80%99s-coloured-bands}{ANU} and \href{https://www.llnl.gov/news/lab-researchers-find-magnetic-fields-impact-atmospheric-circulation-gas-giant-planets}{LLNL} press news; also read about it in \href{https://theconversation.com/jupiters-magnetic-fields-may-stop-its-wind-bands-from-going-deep-into-the-gas-giant-101324}{The Conversation}.)\\[.2cm]
+\textbf{Constantinou, N. C.} (2018). A barotropic model of eddy saturation. \emph{J. Phys. Oceanogr.}, \textbf{48(2)}, 397-411. \doi{http://dx.doi.org/10.1175/JPO-D-17-0182.1} \pdf{\www/publications/EddySaturation-JPO-2018.pdf}\\[.2cm]
+\textbf{Constantinou, N. C.} and Young, W. R. (2017). Beta-plane turbulence above monoscale topography. \emph{J. Fluid Mech.}, \textbf{827}, 415-447. \doi{10.1017/jfm.2017.482} \pdf{\www/publications/betaplane-topo-1.pdf}\\[.2cm]
+Farrell, B. F., Ioannou, P. J., Jim\'enez, J., \textbf{Constantinou, N. C.}, Lozano-Dur\'an, A., and Nikolaidis, M.-A. (2016). A statistical state dynamics-based study of the structure and mechanism of large-scale motions in plane Poiseuille flow. \emph{J. Fluid Mech.}, \textbf{809}, 290-315. \doi{http://dx.doi.org/10.1017/jfm.2016.661} \pdf{\www/publications/VLSM-Poiseuille.pdf}\\[.2cm]
+\textbf{Constantinou, N. C.}, Farrell, B. F., and Ioannou, P. J. (2016). Statistical state dynamics of jet--wave coexistence in barotropic beta-plane turbulence. \emph{J. Atmos. Sci.}, \textbf{73 (5)}, 2229-2253.  \doi{http://dx.doi.org/10.1175/JAS-D-15-0288.1} \pdf{\www/publications/SSD_JetWave.pdf} \\[.2cm]
+Bakas, N. A., \textbf{Constantinou, N. C.}, and Ioannou, P. J. (2015). S3T stability of the homogeneous  state of barotropic beta-plane turbulence. \emph{J. Atmos. Sci.}, \textbf{72 (5)}, 1689-1712. \doi{http://dx.doi.org/10.1175/JAS-D-14-0213.1} \pdf{\www/publications/S3T_barotropic_stability.pdf} \\[.2cm]
+\textbf{Constantinou, N. C.}, Lozano-Dur\'an, A., Nikolaidis, M.-A., Farrell, B. F., Ioannou, P. J., and Jim\'enez, J. (2014). Turbulence in the highly restricted dynamics of a closure at second order: comparison with DNS. \emph{J. Phys.: Conf. Ser.}, \textbf{506}, 012004. \doi{http://dx.doi.org/10.1088/1742-6596/506/1/012004} \pdf{http://iopscience.iop.org/1742-6596/506/1/012004/pdf/1742-6596_506_1_012004.pdf}\\[.2cm]
+\textbf{Constantinou, N. C.}, Farrell, B. F., and Ioannou, P. J. (2014). Emergence and equilibration of jets in beta-plane turbulence: applications of Stochastic Structural Stability Theory. \emph{J. Atmos. Sci.}, \textbf{71 (5)}, 1818-1842.~\doi{http://dx.doi.org/10.1175/JAS-D-13-076.1} \pdf{\www/publications/S3T_jas.pdf}\\[.2cm]
+\textbf{Constantinou, N. C.} and Ioannou, P. J. (2011). Optimal excitation of two dimensional Holmboe instabilities. \emph{Phys. Fluids}, \textbf{23}, 074102. \doi{http://dx.doi.org/10.1063/1.3609283} \pdf{\www/publications/holmboe.pdf}\\[.2cm]
+
+
+\vspace{-1.5em}
+
+
+\subsubsection*{Chapters in Books (refereed)}
+\textbf{Constantinou, N. C.}, Ioannou, P. J., and Bakas, N. A. (2016). Structure and stability of low amplitude jet equilibria in barotropic turbulence. In Karacostas, T., Bais, A., and Nastos, T. P. (eds.) \textit{Perspectives on Atmospheric Sciences}, 369-375, Springer International Publishing. \doi{http://dx.doi.org/10.1007/978-3-319-35095-0_52} \pdf{\www/publications/S3T_eckhaus-comecap-2016.pdf}\\[.2cm]
+Bakas, N. A., \textbf{Constantinou, N. C.}, and Ioannou, P. J. (2016). On the dynamics underlying the emergence of coherent structures in barotropic turbulence. In Karacostas, T., Bais, A., and Nastos, T. P. (eds.) \textit{Perspectives on Atmospheric Sciences}, 361-367, Springer International Publishing. \doi{http://dx.doi.org/10.1007/978-3-319-35095-0_51} \pdf{\www/publications/S3T_stab-comecap-2016.pdf}\\[.2cm]
+
+\vspace{-1.5em}
+
+\subsubsection*{Conference Proceedings (refereed)}
+
+%%{Constantinou, N. C.}, N. A. Bakas and P. J. Ioannou: Equilibration of the jet forming instability in barotropic beta-plane turbulence,  \textit{Geophysical Research Abstracts}, \textbf{18}, EGU2016\mbox{-}2152, 2016.\\[.2cm]
+%%Bakas, N. A., {N. C. Constantinou} and P. J. Ioannou: On the dynamics underlying the emergence of large scale structures in barotropic beta-plane turbulence,  \textit{Geophysical Research Abstracts}, \textbf{18}, EGU2016\mbox{-}2143, 2016.\\[.2cm]
+%%{Constantinou, N. C.}, B. F. Farrell and P. J. Ioannou: Statistical state dynamics of jet--wave coexistence in beta-plane turbulence. \textit{APS March Meeting 2016}, Baltimore, 14-18 Mar., 2016 \\[.2cm] %\pdf{\www/simplified_RNL_ROI2014.pdf}\\[.2cm]
+% Ioannou, P. J., Nikolaidis, M.-A., and \textbf{Constantinou, N. C.} (2014) Simplified turbulence in wall-bounded flows. \textit{9th Panhellenic Meeting ``Fluid Flow Phenomena'' (ROH 2014)}, Athens, 12-13 Dec., 2014 (in greek).  \pdf{\www/publications/simplified_RNL_ROI2014.pdf}\\[.2cm]
+%%Loz\'ano-Duran, A., J. Jim\'enez, B. F. Farrell, P. J. Ioannou, M.-A. Nikolaidis and N. C. Constantinou: A restricted nonlinear-dynamics model for turbulent channel flows. \textit{Bulletin of the APS}, 67th Annual Meeting of the APS, DFD, November 23-25, 2014, San Francisco, California, \textbf{59~(20)}, 2014. \html{http://meetings.aps.org/Meeting/DFD14/Session/H25.5} \pdf{http://absimage.aps.org/image/DFD14/MWS_DFD14-2014-000485.pdf}\\[.2cm]
+Bakas, N. A., Ioannou P. J., and \textbf{Constantinou, N. C.} (2014). Emergence of non-zonal coherent structures in barotropic turbulence. In  Kanakidou, M., Mihalopoulos, N. and Nastos, P. (eds.) \textit{Proceedings of the 12th International Conference on Meteorology, Climatology \& Atmospheric Physics (COMECAP)}, Heraklion, Crete, 28-31 May, Vol.~1, 107-111, ISBN: 978-960-524-430-9.~\pdf{\www/publications/bakas-etal-comecap-2014.pdf}\\[.2cm]
+\textbf{Constantinou, N. C.} and Ioannou, P. J. (2014). Emergence and equilibration of zonal winds in turbulent planetary atmospheres.  In  Kanakidou, M., Mihalopoulos, N. and Nastos, P. (eds.) \textit{Proceedings of the 12th International Conference on Meteorology, Climatology \& Atmospheric Physics (COMECAP)}, Heraklion, Crete, 28-31 May, Vol.~1, 210-214, ISBN: 978-960-524-430-9.~\pdf{\www/publications/constantinou-ioannou-comecap-2014.pdf}\\[.2cm]
+%%Farrell, B. F.,  P. J. Ioannou and {N. C. Constantinou}: Using statistical mean state dynamics to understand jet and zonon formation in beta-plane turbulence, \textit{AGU Fall Meeting}, NG23A-1489, 2013. \html{http://abstractsearch.agu.org/meetings/2013/FM/sections/NG/sessions/NG23A/abstracts/NG23A-1489.html}\\[.2cm]
+%%{Constantinou, N. C.} and P. J. Ioannou: Emergence and equilibration of jets in planetary turbulence,  \textit{Geophysical Research Abstracts}, \textbf{15}, EGU2013\mbox{-}718-1, 2013. \pdf{http://pordlabs.ucsd.edu/navid/EGU2013-718-1.pdf}\\[.2cm]
+%%Farrell, B. F., {N. C. Constantinou} and P. J. Ioannou: Testing Stochastic Structural Stability Theory predictions for turbulent jet formation and equilibration in barotropic beta-plane turbulence using nonlinear and quasi-linear simulations, \textit{AGU Fall Meeting}, NG23A-1554, 2012. \html{http://fallmeeting.agu.org/2012/eposters/eposter/ng23a-1554/}\\[.2cm]
+%%Bakas, N. A., P. J. Ioannou and {N. C. Constantinou}: Stochastic structural stability theory of the Antarctic Circumpolar Current, \textit{Geophysical Research Abstracts}, \textbf{14}, EGU2012\mbox{-}5769, 2012. \pdf{http://pordlabs.ucsd.edu/EGU2012-5769.pdf}\\[.2cm]
+
+\vspace{-1.5em}
+
+\subsubsection*{Other publications}
+Lozano-Dur\'an, A., Karp, M., and \textbf{Constantinou, N. C.} (2018). Wall turbulence with constrained energy extraction from the mean flow. \textit{Center for Turbulence Research – Annual Research Briefs 2018}, 209-220. \pdf{\www/publications/WallTurbulenceEnergyExtraction.pdf} \\[.2cm]
+\textbf{Constantinou, N. C.} (2018). Jupiter's magnetic fields may stop its wind bands from going deep into the gas giant. \textit{The Conversation}, 10th August 2018. \urllink
+{https://theconversation.com/jupiters-magnetic-fields-may-stop-its-wind-bands-from-going-deep-into-the-gas-giant-101324} \\[.2cm]
+
+
+\vspace{-2em}\section*{\bf Conferences}
+Eddy saturation of the Southern Ocean: a baroclinic versus barotropic perspective. \textit{Ocean Sciences Meeting 2020}, San Diego, CA, USA, 16-21~Feb.~2020. (poster)\\[.2cm]
+Demystifying the Southern Ocean's response to wind variability. \textit{ARC Centre of Excellence for Climate Extremes Annual Workshop 2019} \urllink{https://climateextremes.org.au/arc-centre-of-excellence-for-climate-extremes-workshop-2019-hobart/}, Hobart, Tasmania, Australia, 19-21~Nov.~2019. (\textbf{invited talk}) \pdf{\www/presentations/CLEX-SouthernOcean_Nov2019.pdf}\\[.2cm]
+Barotropic versus baroclinic eddy saturation: implications to Southern Ocean dynamics. \textit{22nd Conference on Atmospheric and Oceanic Fluid Dynamics}, Portland ME, USA, 24-28~Jun.~2019. (talk) \pdf{\www/presentations/AOFD_Jun2019.pdf}\\[.2cm]
+Magnetic eddy viscosity of mean shear flows in 2D magnetohydrodynamics: possible application to gas giants' interiors. \textit{22nd Conference on Atmospheric and Oceanic Fluid Dynamics}, Portland ME, USA, 24-28~Jun.~2019. (poster) \pdf{\www/presentations/AOFD_Jun2019-poster.pdf}\\[.2cm]
+Barotropic versus baroclinic eddy saturation. \textit{AGU Fall Meeting 2018}, Washington DC, USA, 10-14~Dec.~2018. (poster) \pdf{\www/presentations/AGU2018_ocean-poster.pdf}\\[.2cm]
+Magnetic suppression of zonal flows on a beta plane. \textit{AGU Fall Meeting 2018}, Washington DC, USA, 10-14~Dec.~2018. (poster) \pdf{\www/presentations/AGU2018_magnetic-poster.pdf}\\[.2cm]
+Statistical state dynamics reveals mechanism for organization of coherent structures in turbulent flows. \textit{Euromech Colloquium 598: Coherent structures in wall-bounded turbulence}, Imperial College London, London, UK, 29-31~Aug.~2018. (\textbf{invited keynote talk}) \pdf{\www/presentations/Euromech598_Aug2018.pdf}\\[.2cm]
+Eddy saturation in a barotropic model. \textit{21st Conference on Atmospheric and Oceanic Fluid Dynamics}, Portland OR, USA, 25-30~Jun.~2017. (talk) \pdf{\www/presentations/AOFD_Jun2017.pdf}\\[.2cm]
+A statistical state dynamics based theory for jet--wave coexistence in beta-plane turbulence. \textit{21st Conference on Atmospheric and Oceanic Fluid Dynamics}, Portland OR, USA, 25-30~Jun.~2017. (poster) \pdf{\www/presentations/AOFD_Jun2017-poster.pdf}\\[.2cm]
+Understanding self-organization in turbulent flows by studying the statistical state dynamics, \textit{Conference on ``Recurrence, self-organization, and the dynamics of turbulence''}, KITP, UC Santa Barbara, USA, 9-13~Jan.~2017. (\textbf{invited talk}) \pdf{\www/presentations/KITP_Jan2017.pdf}\\[.2cm]
+Topographic beta-plane turbulence and form stress. \textit{AGU Fall Meeting 2016}, San Francisco, USA, 12-16~Dec.~2016. (poster) \pdf{\www/presentations/AGU2016_poster.pdf}\\[.2cm]
+Structure and mechanism of turbulence under dynamical restriction in plane Poiseuille flow. \textit{69th APS Division of Fluid Dynamics Meeting}, Portland, USA, 20-22~Nov.~2016. (talk) \pdf{\www/presentations/APS-DFD-2016.pdf} \\[.2cm]
+Statistical state dynamics of jet--wave coexistence in beta-plane turbulence. \textit{APS March Meeting 2016}, Baltimore, USA, 14-18 Mar., 2016. (talk) \pdf{\www/presentations/APS_Mar2016.pdf} \\[.2cm]
+Emergence and equilibration of zonal winds in turbulent planetary atmospheres. \textit{12th International Conference on Meteorology,
+Climatology and Atmospheric Physics, COMECAP 2014} \html{http://comecap2014.chemistry.uoc.gr/}, Heraklion, Crete, Greece, 28-31 May 2014. (poster) \pdf{\www/presentations/COMECAP14_poster.pdf}\\[.2cm]
+Emergence and equilibration of jets in planetary turbulence.  \textit{EGU 2013 General Assembly} \html{http://www.egu2013.eu/}, Vienna, Austria, 8-12 Apr. 2013. (talk) \pdf{\www/presentations/EGU13-talk.pdf}
+\\[.2cm]
+Emergence and equilibration of jets in planetary turbulence.  \textit{8th Panhellenic Meeting ``Fluid Flow Phenomena'' (ROI 2012)} \html{http://www.mie.uth.gr/flow2012/}, Volos, Greece, 16-17 November 2012. (talk) \pdf{\www/presentations/ROI12-talk}\\[.2cm]
+
+
+
+
+
+\vspace{-2em}\section*{\bf Seminars}
+
+What's underneath Jupiter's and Saturn's stripes? FEARS Meeting, Research School of Astronomy and Astrophysics \html{http://rsaa.anu.edu.au/}, Australian National University, Canberra, Australia, 29 Oct. 2019. \href{\www/presentations/RSAA-MagneticViscosity_Oct2019.pdf}{{\fontspec{FontAwesome}{}}}\\[.2cm]
+What is hiding underneath the stripes of Jupiter and Saturn? Department of Physics Colloquium, Department of Physics \html{http://en.phys.uoa.gr/}, National and Kapodistrian University of Athens \html{http://en.uoa.gr/}, Athens, Greece, 16 Oct. 2019. \href{\www/presentations/UoA-MagneticViscosity_Oct2019.pdf}{{\fontspec{FontAwesome}{}}}\\[.2cm]
+Barotropic versus baroclinic eddy saturation: implications to Southern Ocean dynamics. Geophysical Fluid Dynamics Summer Program, Woods Hole Oceanographic Institution \html{https://www.whoi.edu/gfd}, Woods Hole, USA, 9 Jul. 2019. \href{\www/presentations/EddySaturation-GFD-2019.pdf}{{\fontspec{FontAwesome}{}}}\\[.2cm]
+Barotropic versus baroclinic eddy saturation: implications to Southern Ocean dynamics. Geophysical Fluid Dynamics Summer Program, Woods Hole Oceanographic Institution \html{https://www.whoi.edu/gfd}, Woods Hole, USA, 9 Jul. 2019. \href{\www/presentations/EddySaturation-GFD-2019.pdf}{{\fontspec{FontAwesome}{}}}\\[.2cm]
+A barotropic process-model for eddy saturation. WHOI Physical Oceanography Seminar Series, Woods Hole Oceanographic Institution \html{https://www.whoi.edu}, Woods Hole, USA, 16 Apr. 2019. \href{http://www.navidconstantinou.com/presentations/WHOI_Apr2019.pdf}{{\fontspec{FontAwesome}{}}}\\[.2cm]
+How does the Antarctic Circumpolar Current respond to the increasing winds over the Southern Ocean?
+Barotropic versus baroclinic eddy saturation. Physics \& Physical Oceanography Department Seminar Series, University of North Carolina Wilmington \html{https://uncw.edu/phy/}, Wilmington NC, USA, 11 Apr. 2019.\\[.2cm]
+How does the Antarctic Circumpolar Current respond to the increasing winds over the Southern Ocean?: Barotropic versus Baroclinic Eddy Saturation. Fluids Seminar Math Department \html{https://www.monash.edu/science/schools/mathematical-sciences}, Monash University \html{https://www.monash.edu}, Melbourne, Australia, 12 Feb. 2019.\\[.2cm]
+Statistical state dynamics: a new framework for understanding turbulent flows. Fluid Mechanics Research Group Seminar \html{https://fluids.eng.unimelb.edu.au}, University of Melbourne \html{https://www.unimelb.edu.au}, Melbourne, Australia, 8 Feb. 2019.\\[.2cm]
+Magnetic suppression of zonal flows on a beta plane. SpinLab Group Seminar \html{http://spinlab.ess.ucla.edu/}, University of California Los Angeles \html{https://www.ucla.edu}, Los Angeles, CA, USA, 11 Jan. 2019.  \pdf{\www/presentations/GFDL_Dec2018.pdf}\\[.2cm]
+Barotropic versus baroclinic eddy saturation. Oceans and Climate Group Seminar \html{https://www.gfdl.noaa.gov/ocean-and-cryosphere-division/}, Geophysical Fluid Dynamics Laboratory \html{https://www.gfdl.noaa.gov/}, Princeton, NJ, USA, 12 Dec. 2018.  \pdf{\www/presentations/GFDL_Dec2018.pdf}\\[.2cm]
+Eddy saturation in a barotropic model. LDEO OCP Seminar \html{https://www.ldeo.columbia.edu/research/ocean-climate-physics/seminars}, Lamont-Doherty Earth Observatory \html{https://www.ldeo.columbia.edu}, Columbia University, Palisades, NY, USA, 27 Oct. 2017.  \pdf{\www/presentations/CEAFM_Oct2017.pdf}\\[.2cm]
+Eddy saturation in a barotropic model. ClimaTea Seminar \html{https://eps.harvard.edu/eps-event-type/climate-seminar}, Harvard University, Cambridge, MA, USA, 26 Oct. 2017.  \pdf{\www/presentations/CEAFM_Oct2017.pdf}\\[.2cm]
+Eddy saturation in a barotropic model. CEAFM Seminar \html{http://pages.jh.edu/~ceafm/}, Department of Earth \& Planetary Sciences, The Johns Hopkins University, Baltimore, USA, 13 Oct. 2017.  \pdf{\www/presentations/CEAFM_Oct2017.pdf}\\[.2cm]
+Topographic beta-plane turbulence and form stress. Geophysical Fluid Dynamics Summer Program, Woods Hole Oceanographic Institution \html{https://www.whoi.edu/gfd}, Woods Hole, USA, 19 Jul. 2016. \href{http://www.navidconstantinou.com/presentations/GFD-2016.pdf}{{\fontspec{FontAwesome}{}}}
+\\[.2cm]
+Topographic beta-plane turbulence and form stress. Mathematics of Turbulence Reunion Conference, IPAM, UCLA \html{http://www.ipam.ucla.edu/}, Lake Arrowhead, 7 Jun. 2016. \href{http://www.navidconstantinou.com/presentations/IPAM_Jun2016.pdf}{{\fontspec{FontAwesome}{}}}
+\\[.2cm]
+Statistical state dynamics of planetary turbulence. CEAFM Seminar \html{http://pages.jh.edu/~ceafm/}, Whiting School of Engineering, The Johns Hopkins University, Baltimore, 18 Mar. 2016.  \href{http://www.navidconstantinou.com/presentations/CEAFM_Mar2016.pdf}{{\fontspec{FontAwesome}{}}}
+\\[.3cm]
+A theory for large-scale structure formation in atmospheric/oceanic turbulence: Is jet formation a phase transition phenomenon? CASPO Seminar, Scripps Institution of Oceanography, UC San Diego \html{https://scripps.ucsd.edu/}, La Jolla, 10 Feb. 2016.  \pdf{\www/presentations/CASPO_Feb2016.pdf}
+\\[.2cm]
+Formation of large-scale structures by turbulence in planetary atmospheres. Physics Department, University of Cyprus \html{https://www.ucy.ac.cy/phy/en/}, Nicosia, 5 May 2015.  \pdf{\www/presentations/UCY_May2015.pdf}
+\\[.2cm]
+Emergence of large-scale structure in planetary turbulence as an instability of the of the homogeneous turbulent state. IPAM, UCLA \html{http://www.ipam.ucla.edu/}, Los Angeles, 21 Oct. 2014.  \pdf{\www/presentations/IPAM_Oct2014.pdf}
+\\[.2cm]
+Emergence and equilibration of zonal winds in turbulent planetary atmospheres. Cyprus Oceanography Center, University of Cyprus \html{http://www.oceanography.ucy.ac.cy/}, Nicosia, 7 Jan. 2014.  \pdf{\www/presentations/UCY_Jan2014.pdf}
+\\[.2cm]
+Verification of the predictions of SSST in nonlinear simulations. 2nd  Meeting of ``Zonal Jets and Eddies'' team, International Space Science Institute (ISSI) \html{http://www.issibern.ch/teams/zonaljets/}, Bern 2-5 Apr. 2013.  \pdf{\www/presentations/ISSI_Apr2013.pdf}\\[.2cm]
+
+
+
+%\hrule
+
+\vspace{-2em}\section*{\bf Workshops}
+
+\noindent\years{2019}\textbf{Advanced Ocean Modelling School}\\April 28 - May 3, Lake Pedder, Tasmania, Australia~\html{https://climateextremes.org.au/advanced-ocean-modelling-summer-school/}\\[.2cm]
+% \noindent\years{2018}\textbf{ARC Centre of Excellence for Climate Extremes Annual Workshop}\\November 19 - November 21, Wollongong, NSW, Australia~\html{https://climateextremes.org.au/event/clex-annual-workshop-2018/}\\[.2cm]
+\noindent\years{2017}\textbf{Vorticity in the Universe: From Superfluids to Weather and Climate, to the Universe}\\Aspen Center for Physics\\August 27 - September 17 2017, Aspen, CO, USA~\html{http://www.aspenphys.org/}\\[.2cm]
+\noindent\years{2017}\textbf{Les Houches Summer School on Fundamental Aspects of Turbulent Flows in Climate Dynamics}\\Les Houches Physics School\\July 31 - August 25 2017, Les Houches, France~\html{https://climate-houches.sciencesconf.org/}\\[.2cm]
+\noindent\years{2014}\textbf{Mathematics of Turbulence}\\Institute of Pure \& Applied Mathematics, UCLA\\September 8 - December 12 2014, Los Angeles, USA~\html{https://www.ipam.ucla.edu/programs/long-programs/mathematics-of-turbulence/}\\[.2cm]
+\noindent\years{2013}\textbf{Geoturb: Numerical Modeling and Theoretical Challenges in Atmosphere and Ocean Turbulence}\\Ecole normale sup\'erieure de Lyon\\2-4 October 2013, Lyon, France.~\html{http://geoturb.sciencesconf.org/}\\[.2cm]
+\noindent\years{2013}\textbf{First Multiflow Summer Workshop}\\Universidad Polit\'ecnica de Madrid\\10 June - 12 July 2013, Madrid, Spain.~\html{https://doi.org/10.1088/1742-6596/506/1/011001}\\[.2cm]
+\noindent\years{2011}\textbf{International Graduate School on Stability, Transition to Turbulence and Flow Control}\\Organized by Advanced Instability Methods (AIM) Network\\22-27 August 2011, Cambridge, UK.~\html{http://www2.eng.cam.ac.uk/~mpj1001/AIM_ED.html}\\[.2cm]
+\noindent\years{2009}\textbf{Climate Variability \& Climate Change}: \textbf{Estimating and Reducing Uncertainties}\\8-17 June 2009, Visegr\'ad, Hungary.~\html{http://owww.met.hu/omsz.php?almenu_id=omsz&pid=seminars&pri=4&mpx=0}\\[.2cm]
+
+
+
+
+
+\vspace{-2em}\section*{\bf Teaching/Supervision Experience}
+
+\noindent\years{2020}Course co-convener for \textbf{Basics of Dynamical Systems and Bifurcation Theory} (Honors/Masters/Graduate)\\[0pt] [3 lectures by Henk Dijkstra; 3 workshops by myself]\\
+Research School of Earth Sciences, Australian National University, Australia\\[.2cm]
+\noindent\years{Nov.~2019 -- \\ \mbox{$\;\;\;$}Feb.~2020}Supervising Fabian Antonio Circelli (undergraduate student).\\[0pt] Project:~``\textbf{Fourier-based Pseudospectral Methods for Solving Partial Differential Equations}.''\\[0pt]Aim: Implement GPU functionality in \href{https://github.com/FourierFlows/FourierFlows.jl}{\color{black}FourierFlows.jl} Julia package.\\
+Research School of Earth Sciences, Australian National University, Australia\\[.2cm]
+\newpage\noindent\years{2018}Course Coordinator for \textbf{Instabilities in Fluids} (Honors/Masters)\\[0pt] [lecture notes and students' project reports available at \href{https://github.com/navidcy/Instabilities-in-Fluids}{github}]\\
+Research School of Earth Sciences, Australian National University, Australia\\[.2cm]
+\noindent\years{2018}Visiting lecturer for \textbf{Fluid Mechanics} (Undergraduate) [lecture notes available at \href{https://github.com/navidcy/PseudospectralTutorial/tree/master/UNCW2018}{github}]\\
+Department of Physics and Physical Oceanography, University of North Carolina Wilmington, USA\\[.2cm]
+\noindent\years{2017}Teaching assistant for \textbf{Applied Mathematics III} (Graduate)\\
+Scripps Institution of Oceanography, University of California San Diego, USA\\[.2cm]
+\noindent\years{2010-2014}Teaching assistant for \textbf{Nonlinear Dynamical Systems} (3rd year Undergraduate)\\
+Physics Department, \ekpa, Greece\\[.2cm]
+
+\vspace{-2em}\section*{\bf Programming skills}
+
+\href{http://julialang.org}{\color{black}\julia}, \href{https://www.python.org}{\color{black}Python}, Matlab, git, markdown\\[.2cm]
+
+\vspace{-2em}\section*{\bf Software}
+Core developer for ``\href{https://github.com/FourierFlows/FourierFlows.jl}{\color{black}FourierFlows.jl}'': Julia ecosystem for solving partial differential equations on periodic domains with Fourier-based pseudospectral methods; doi:\href{http://dx.doi.org/10.5281/zenodo.1161724}{\color{jhublue}10.5281/zenodo.1161724}\\[.2cm]
+Core developer for ``\href{https://github.com/FourierFlows/GeophysicalFlows.jl}{\color{black}GeophysicalFlows.jl}'': Julia modules for solving problems in Geophysical Fluid Dynamics on periodic domains using Fourier-based pseudospectral methods; doi:\href{http://dx.doi.org/10.5281/zenodo.1161724}{\color{jhublue}10.5281/zenodo.1463809}\\[.2cm]
+
+
+
+
+\vspace{-2em}\section*{\bf Other Scientific Activities}
+
+\begin{tabular*}{\textwidth}{p{1.0cm}c@{\extracolsep{.25cm}}p{12.1cm}}
+{Reviewer}  & : &  Journal of Fluid Mechanics, Journal of Physical Oceanography, Physics of Plasmas, Physics Letters~A, Scientific Reports, Geophysical Research Letters.\\
+{Member } & : & American Geophysical Union, American Meteorological Society, American Physical Society (also member of Topical Group on the Physics of Climate).
+\end{tabular*}\\[.2cm]
+
+
+
+
+\vspace{-2em}\section*{\bf References}
+
+%\begin{tabular}{p{8cm}p{11cm}}
+%\raggedright \textbf{Petros J. Ioannou}\\
+%Department of Physics\\
+%University of Athens\\
+%Zografos, 15784, Greece\\
+%{\fontspec{Meiryo}{☎}}\hspace{.188cm}\texttt{\href{skype:+302107276910?sms}{\small +30\;210\;7276910}}\\
+%\hspace{.1em}{\fontspec{Arial Unicode MS}{✉}}\hspace{-.1em}\hspace{.32cm}\href{mailto:pjioannou@phys.uoa.gr}{\small pjioannou@phys.uoa.gr}\\
+%\hspace{.1em}{w}\hspace{.24cm}\href{http://users.uoa.gr/~pjioannou/}{\small http://users.uoa.gr/$\sim$pjioannou}
+%& \small{(Ph.D. thesis advisor)}\\
+%\mbox{}&\\
+%\raggedright \textbf{Brian F. Farrell}\\
+%Department of Earth and Planetary Sciences\\
+%Harvard University\\
+%Cambridge, MA 02138, USA\\
+%{\fontspec{Meiryo}{☎}}\hspace{.188cm}\texttt{\href{skype:+16174952998?sms}{\small +1\;(617)\;495-2998}}\\
+%\hspace{.1em}{\fontspec{Arial Unicode MS}{✉}}\hspace{-.1em}\hspace{.32cm}\href{mailto:farrell@seas.harvard.edu}{\small farrell@seas.harvard.edu}\\
+%\hspace{.1em}{w}\hspace{.24cm}\href{http://projects.iq.harvard.edu/brian_f_farrell/}{\small http://projects.iq.harvard.edu/brian\_f\_farrell/}
+%& \\
+%\mbox{}&\\
+%\raggedright \textbf{Nikolaos A. Bakas}\\
+%Department of Physics\\
+%University of Ioannina\\
+%Ioannina, 45221, Greece\\
+%{\fontspec{Meiryo}{☎}}\hspace{.188cm}\texttt{\href{skype:+302651008599?sms}{\small +30\;26510\;08599}}\\
+%\hspace{.1em}{\fontspec{Arial Unicode MS}{✉}}\hspace{-.1em}\hspace{.32cm}\href{mailto:nbakas@uoi.gr}{\small nbakas@uoi.gr}
+%&\\
+%\mbox{}&\\
+%\raggedright \textbf{Theocharis A. Apostolatos}\\
+%Department of Physics\\
+%University of Athens\\
+%Zografos, 15784, Greece\\
+%{\fontspec{Meiryo}{☎}}\hspace{.188cm}\texttt{\href{skype:+302107276902?sms}{\small +30\;210\;7276902}}\\
+%\hspace{.1em}{\fontspec{Arial Unicode MS}{✉}}\hspace{-.1em}\hspace{.32cm}\href{mailto:thapostol@phys.uoa.gr}{\small thapostol@phys.uoa.gr} \\
+%\hspace{.1em}{w}\hspace{.24cm}\href{http://users.uoa.gr/~thapostol/}{\small http://users.uoa.gr/$\sim$thapostol}
+%&
+%\end{tabular}
+
+
+\begin{tabular}{p{.5\textwidth}p{.5\textwidth}}
+\begin{minipage}[c]{.49\textwidth}
+\raggedright \textbf{Petros J. Ioannou} (Ph.D. advisor)\\
+Department of Physics\\
+\ekpa\\
+Zografos, 157\,84, Greece\\
+{\fontspec{Meiryo}{☎}}\hspace{.188cm}\texttt{\href{skype:+302107276910?sms}{ +30$\;$210$\;$7276910}}\\
+\hspace{.1em}{\fontspec{Arial Unicode MS}{✉}}\hspace{-.1em}\hspace{.32cm}{\small\href{mailto:pjioannou@phys.uoa.gr}{ pjioannou@phys.uoa.gr}}\\
+\hspace{.1em}{w}\hspace{.24cm}{\small\href{http://users.uoa.gr/~pjioannou/}{ http://users.uoa.gr/$\sim$pjioannou}}
+\end{minipage}%
+&
+\begin{minipage}[c]{.49\textwidth}
+\raggedright \textbf{William R. Young} (postdoc supervisor)\\
+Scripps Institution of Oceanography\\
+University of California San Diego\\
+La Jolla, CA 92037-0213, USA\\
+{\fontspec{Meiryo}{☎}}\hspace{.188cm}\texttt{\href{skype:+18585341380?sms}{+1$\;$(858)$\;$534-1380}}\\
+\hspace{.1em}{\fontspec{Arial Unicode MS}{✉}}\hspace{-.1em}\hspace{.32cm}{\small\href{mailto:wryoung@ucsd.edu}{wryoung@ucsd.edu}}\\
+\hspace{.1em}{w}\hspace{.24cm}{\small\href{http://pordlabs.ucsd.edu/wryoung/}{http://pordlabs.ucsd.edu/wryoung/}}\end{minipage}\\
+\mbox{}&\\
+\begin{minipage}[c]{.55\textwidth}
+\raggedright \textbf{Andy McC. Hogg} (postdoc supervisor)\\
+Research School of Earth Sciences\\
+Australian National University\\
+Canberra, ACT 2601, Australia\\
+{\fontspec{Meiryo}{☎}}\hspace{.188cm}\texttt{\href{skype:+61261259962?sms}{+61$\;$2$\;$61259962}}\\
+\hspace{.1em}{\fontspec{Arial Unicode MS}{✉}}\hspace{-.1em}\hspace{.32cm}{\small\href{mailto:andy.hogg@anu.edu.au}{andy.hogg@anu.edu.au}}\\
+\hspace{.1em}{w}\hspace{.24cm}{\small\href{http://rses.anu.edu.au/people/academics/prof-andy-hogg}{http://rses.anu.edu.au/people/academics/prof-andy-hogg}}\end{minipage}%
+&
+\begin{minipage}[c]{.48\textwidth}
+\raggedright \textbf{Brian F. Farrell}\\
+Department of Earth and Planetary Sciences\\
+Harvard University\\
+Cambridge, MA 02138, USA\\
+{\fontspec{Meiryo}{☎}}\hspace{.188cm}\texttt{\href{skype:+16174952998?sms}{+1$\;$(617)$\;$495-2998}}\\
+\hspace{.1em}{\fontspec{Arial Unicode MS}{✉}}\hspace{-.1em}\hspace{.32cm}{\small\href{mailto:farrell@seas.harvard.edu}{farrell@seas.harvard.edu}}\\
+\hspace{.1em}{w}\hspace{.24cm}{\small\href{http://brian-f-farrell.fas.harvard.edu/}{http://brian-f-farrell.fas.harvard.edu}}\end{minipage}\\
+
+
+
+% \begin{minipage}[c]{.48\textwidth}
+% \raggedright \textbf{Javier Jim\'enez}\\
+% School of Aeronautics\\
+% Universidad Polit\'ecnica de Madrid\\
+% Madrid, 28040, Spain\\
+% {\fontspec{Meiryo}{☎}}\hspace{.188cm}\texttt{\href{skype:+34913366361?sms}{+34$\;$913366361}}\\
+% \hspace{.1em}{\fontspec{Arial Unicode MS}{✉}}\hspace{-.1em}\hspace{.32cm}{\small\href{mailto:jimenez@torroja.dmt.upm.es}{jimenez@torroja.dmt.upm.es}}\\
+% \mbox{}\end{minipage}\\
+
+
+
+% \begin{minipage}[c]{.48\textwidth}
+% \raggedright \textbf{Nikolaos A. Bakas}\\
+% Department of Physics\\
+% University of Ioannina\\
+% Ioannina, 452\,21, Greece\\
+% {\fontspec{Meiryo}{☎}}\hspace{.188cm}\texttt{\href{skype:+302651008599?sms}{\small +30$\;$26510$\;$08599}}\\
+% \hspace{.1em}{\fontspec{Arial Unicode MS}{✉}}\hspace{-.1em}\hspace{.32cm}{\small\href{mailto:nbakas@uoi.gr}{nbakas@uoi.gr}}\\
+% %\hspace{.1em}{w}\hspace{.24cm}{\small\href{http://users.uoa.gr/~thapostol/}{http://users.uoa.gr/$\sim$thapostol}} \\
+% \mbox{}
+% \end{minipage}%
+
+%\begin{minipage}[c]{.48\textwidth}
+%\raggedright \textbf{Theocharis A. Apostolatos}\\
+%Department of Physics\\
+%\ekpa\\
+%Zografos, 157\,84, Greece\\
+%{\fontspec{Meiryo}{☎}}\hspace{.188cm}\texttt{\href{skype:+302107276902?sms}{\small +30$\;$210$\;$7276902}}\\
+%\hspace{.1em}{\fontspec{Arial Unicode MS}{✉}}\hspace{-.1em}\hspace{.32cm}{\small\href{mailto:thapostol@phys.uoa.gr}{thapostol@phys.uoa.gr}} \\
+%\hspace{.1em}{w}\hspace{.24cm}{\small\href{http://users.uoa.gr/~thapostol/}{http://users.uoa.gr/$\sim$thapostol}} \\
+%\mbox{}
+%\end{minipage}%
+
+
+\end{tabular}
+
+\vfill{}
+%\hrulefill
+
+
+\begin{center}
+{\scriptsize  Last updated: \today}
+\end{center}
+
+\end{document}

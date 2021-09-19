@@ -1,4 +1,4 @@
-% !TEX program = luatex
+% !TEX program = LuaLaTeX
 % !TEX encoding = UTF-8
 
 %---------------------------------------
@@ -62,12 +62,12 @@
 \definecolor{mylightblue}{RGB}{49,101,205}
 \definecolor{mydarkblue}{RGB}{20,92,205}
 
-\usepackage{xunicode}
+%\usepackage{xunicode}
 \usepackage{xltxtra}
 \defaultfontfeatures{Mapping=tex-text}
 \setromanfont [Ligatures={Common},Variant=01]{Linux Libertine}
 %\setromanfont [Ligatures={Common}, BoldFont={Gentium Basic Bold}, ItalicFont={Gentium Basic Italic}]{Gentium Basic}
-\setmonofont[Scale=0.7]{Monaco}
+%\setmonofont[Scale=0.7]{Monaco}
 %\setromanfont[Ligatures={Common}, SmallCapsFont={OfficinaSanITC-BookSC}, BoldFont={OfficinaSanITC-MediumOS}, ItalicFont={Officina Serif ITC Book Italic OS}]{Officina Serif ITC Book}
 %\setmonofont[Scale=0.7]{Monaco}
 \setsansfont [Ligatures={Common}, SmallCapsFont={HoeflerText-Regular}, BoldFont={HoeflerText-Black}, ItalicFont={HoeflerText-Italic}]{Hoefler Text}
@@ -87,6 +87,7 @@
 
 \newcommand{\arxiv}[1]{\href{#1}{\scriptsize[arXiv]}}
 \newcommand{\pji}{\href{http://users.uoa.gr/~pjioannou/}{{\color{black}Petros J. Ioannou}}}
+\newcommand{\CliMA}{\href{https://clima.caltech.edu}{{\color{black}CliMA}}}
 \newcommand{\wryoung}{\href{http://pordlabs.ucsd.edu/wryoung/}{{\color{black}William R. Young}}}
 \newcommand{\amhogg}{\href{http://rses.anu.edu.au/people/academics/prof-andy-hogg/}{{\color{black}Andy Hogg}}}
 \newcommand{\leventis}{\href{http://www.leventisfoundation.org}{{\color{black}A. G. Leventis Foundation}}}
@@ -389,6 +390,7 @@ Lozano-Dur\'an, A., Karp, M., and \textbf{Constantinou, N. C.} (2018). Wall turb
 \end{etaremune}
 
 \vspace{-2em}\section*{\bf Conferences}
+Machine learning algorithms for ocean eddy parametrizations \textit{Conference on ``Machine Learning for Climate''}, KITP, UC Santa Barbara, USA, 1-4~Nov.~2021. (\textbf{invited talk})\\[.2cm]
 Cause-and-effect of linear mechanisms in wall turbulence. \textit{73rd APS Division of Fluid Dynamics Meeting}, Chicago, IL, USA, 22-24~Nov.~2020. (virtual talk) \pdf{\www/presentations/APS-DFD-2020.pdf} \href{https://youtu.be/tDV6j9WjhIY}{\scriptsize\textsc{[video]}}\\[.2cm]
 Eddy saturation of the Southern Ocean: a baroclinic versus barotropic perspective. \textit{Ocean Sciences Meeting 2020}, San Diego, CA, USA, 16-21~Feb.~2020. (poster) \pdf{\www/presentations/OSM_Feb2020-poster.pdf}\\[.2cm]
 Demystifying the Southern Ocean's response to wind variability. \textit{ARC Centre of Excellence for Climate Extremes Annual Workshop 2019} \urllink{https://climateextremes.org.au/arc-centre-of-excellence-for-climate-extremes-workshop-2019-hobart/}, Hobart, Tasmania, Australia, 19-21~Nov.~2019. (\textbf{invited talk}) \pdf{\www/presentations/CLEX-SouthernOcean_Nov2019.pdf}\\[.2cm]
@@ -446,11 +448,13 @@ Emergence and equilibration of zonal winds in turbulent planetary atmospheres. C
 Verification of the predictions of SSST in nonlinear simulations. 2nd  Meeting of ``Zonal Jets and Eddies'' team, International Space Science Institute (ISSI) \html{http://www.issibern.ch/teams/zonaljets/}, Bern 2-5 Apr. 2013.  \pdf{\www/presentations/ISSI_Apr2013.pdf}\\[.2cm]
 
 
-
 %\hrule
 
 \vspace{-2em}\section*{\bf Workshops}
 
+\noindent\years{2021}\textbf{Machine Learning and the Physics of Climate}\\
+Kavli Institute for Theoretical Physics, UC Santa Barbara\\
+November 1 - December 17 2021, Santa Barbara, CA, USA~\html{https://www.kitp.ucsb.edu/activities/climate21/}\\[.2cm]
 \noindent\years{2021}\textbf{Layering in Atmospheres, Oceans, and Plasmas}\\
 Kavli Institute for Theoretical Physics, UC Santa Barbara\\
 January 11 - March 12 2021, Santa Barbara (Virtual), CA, USA~\html{https://www.kitp.ucsb.edu/activities/staircase21/}\\[.2cm]
@@ -469,18 +473,19 @@ April 28 - May 3, Lake Pedder, Tasmania, Australia~\html{https://climateextremes
 
 
 
-\vspace{-2em}\section*{\bf Teaching Experience}
+\vspace{-2em}\section*{\bf Teaching}
 
 \noindent\years{Jun.~2021}\textbf{Atmosphere and Ocean Dynamics Winter School 2021}\\
+\textbf{[Postponed due to COVID-19 lockdowns in East Australia]}\\
 (main lecturer along w/ Martin Singh and Annie Foppert)\\[0pt] 
 Australian National University\\[0pt] 
 [organized by ARC Centre of Excellence for Climate Extremes; more information \href{https://climateextremes.org.au/winter-school-2021-atmosphere-and-ocean-dynamics/}{online}]\\[.2cm]
 \noindent\years{2021}\textbf{Computational Geosciences} (Undergraduate/Honors EMSC4033; Masters EMSC8033)\\
-(main lecturer along w/ Louis Moresi)\\[0pt]
+(main lecturer along w/ \href{http://www.moresi.info}{\color{black}Louis Moresi})\\[0pt]
 [course website at \href{https://github.com/ANU-RSES-Education/EMSC-4033}{github}]\\
 Research School of Earth Sciences, Australian National University, Australia\\[.2cm]
 \noindent\years{Jun.~2020}\textbf{Atmosphere and Ocean Dynamics Winter School 2020}\\
-\textbf{[School Postponed due to COVID-19; 3 introductory lectures were given via Zoom]}\\
+\textbf{[School changed form due to COVID-19; 3 introductory lectures via Zoom, full-blown lectures postponed for 2021]}\\
 (main lecturer along w/ Martin Singh and Annie Foppert)\\[0pt] 
 Institute for Marine and Antarctic Studies \& University of Tasmania\\[0pt] 
 [organized by ARC Centre of Excellence for Climate Extremes; more information \href{https://climateextremes.org.au/clex-winter-school-2020-atmosphere-and-ocean-dynamics/}{online}]\\[.2cm]
@@ -496,8 +501,9 @@ Scripps Institution of Oceanography, University of California San Diego, USA\\[.
 Physics Department, \ekpa, Greece\\[.2cm]
 
 \vspace{-2em}\section*{\bf Student Supervision}
-\noindent\years{Feb.~2021 --}\href{https://ongqingyee.github.io}{{\color{black}Ellie Ong}} (Ph.D. student at University of New South Wales; co-supervisor).\\[0pt] Project:~``Investigation into local drivers of change at the Antarctic Continental Margin.''\\[.2cm]
-\noindent\years{Oct.~2020 --}\href{https://earthsciences.anu.edu.au/people/students/dhruv-bhagtani}{\color{black} Dhruv Bhagtani} (Ph.D. student; co-supervisor).\\[0pt] Project:~``The interplay between wind stress and surface buoyancy in driving large-scale oceanic gyres.''\\[.2cm]
+\noindent\years{commencing Feb.~2022}{\color{black}Elise Palethorpe} (Honors student at Australian National University).\\[0pt] Project:~``\textbf{Enhancing \CliMA's new general circulation model: developments in the ocean component}.''\\[.2cm]
+\noindent\years{Feb.~2021 --}\href{https://ongqingyee.github.io}{{\color{black}Ellie Ong}} (Ph.D. student at University of New South Wales; co-supervisor).\\[0pt] Project:~``\textbf{Investigation into local drivers of change at the Antarctic Continental Margin}.''\\[.2cm]
+\noindent\years{Oct.~2020 --}\href{https://earthsciences.anu.edu.au/people/students/dhruv-bhagtani}{\color{black} Dhruv Bhagtani} (Ph.D. student; co-supervisor).\\[0pt] Project:~``\textbf{The interplay between wind stress and surface buoyancy in driving large-scale oceanic gyres}.''\\[.2cm]
 \noindent\years{Jul.~2020 -- \\ \mbox{$\;\;\;$}Nov.~2020}Elise Palethorpe (2nd year undergraduate student).\\[0pt] Project:~``\textbf{Numerical methods for Partial Differential Equations}.''\\[0pt]Aim: Learn basics of finite difference numerical schemes for solving hyperbolic and also study and implement high-order accurate weighted essentially non-oscillatory (WENO) schemes.\\[.2cm]
 \noindent\years{Nov.~2019 -- \\ \mbox{$\;\;\;$}Feb.~2020}Fabian Antonio Circelli (3rd year undergraduate student).\\[0pt] Project:~``\textbf{Fourier-based Pseudospectral Methods for Solving Partial Differential Equations}.''\\[0pt]Aim: Learn basics of pseudospectral techniques for solving PDEs and implement GPU functionality in \href{https://github.com/FourierFlows/FourierFlows.jl}{\color{black}FourierFlows.jl} Julia package.\\[.2cm]
 
@@ -507,24 +513,28 @@ Physics Department, \ekpa, Greece\\[.2cm]
 \href{http://julialang.org}{\color{black}\julia}, \href{https://www.python.org}{\color{black}Python}, git\\[.2cm]
 
 \vspace{-2em}\section*{\bf Open-Source Software}
+A small selection of contributions includes:\\[.2cm]
+
 Core developer for ``\href{https://github.com/FourierFlows/FourierFlows.jl}{\color{black}FourierFlows.jl}'': Julia ecosystem for solving partial differential equations on periodic domains with Fourier-based pseudospectral methods; doi:\href{http://dx.doi.org/10.5281/zenodo.1161724}{\color{jhublue}10.5281/zenodo.1161724}\\[.2cm]
 Core developer for ``\href{https://github.com/FourierFlows/GeophysicalFlows.jl}{\color{black}GeophysicalFlows.jl}'': Julia modules for solving problems in Geophysical Fluid Dynamics on periodic domains using Fourier-based pseudospectral methods; doi:\href{http://dx.doi.org/10.5281/zenodo.1161724}{\color{jhublue}10.5281/zenodo.1463809}\\[.2cm]
 Contributor for ``\href{https://github.com/CliMA/Oceananigans.jl}{\color{black}Oceananigans.jl}'': A fast and friendly incompressible fluid flow solver in Julia that can be run in 1-3 dimensions on CPUs and GPUs; doi:\href{https://doi.org/10.21105/joss.02018}{\color{jhublue}10.21105/joss.02018}\\[.2cm]
 Contributor for ``\href{https://github.com/xgcm/xrft}{\color{black}xrft}'': Python package for taking the discrete Fourier transform (DFT) on xarray and dask arrays; doi:\href{https://doi.org/10.5281/zenodo.1402635}{\color{jhublue}10.5281/zenodo.1402635}\\[.2cm]
 
-
+For more details visit my GitHub profile: \faGithub \hspace{0.2em} \href{https://github.com/navidcy}{navidcy}
 
 
 \vspace{-2em}\section*{\bf Mobility}
 
-Studied and worked in academic institutions in \textbf{Greece}, \textbf{Cyprus}, \textbf{U.S.A.}, and \textbf{Australia}. Curently, resident of \href{https://en.wikipedia.org/wiki/Broulee,_New_South_Wales}{{\color{black}Broulee, NSW}}.\\[.2cm]
+Studied and worked in academic institutions in \textbf{Greece}, \textbf{Cyprus}, \textbf{U.S.A.}, and \textbf{Australia}. Currently, resident of \href{https://en.wikipedia.org/wiki/Broulee,_New_South_Wales}{{\color{black}Broulee, New South Wales}}.\\[.2cm]
 
 
 \vspace{-2em}\section*{\bf Other Scientific Activities}
 
-\begin{tabular*}{\textwidth}{p{1.5cm}c@{\extracolsep{.25cm}}p{12.1cm}}
-Reviewer & : &  Journal of Fluid Mechanics, Journal of Physical Oceanography, Physics of Plasmas, Physics Letters~A, Scientific Reports, Geophysical Research Letters, Fluids, Journal of Advances in Modeling Earth Systems, Mathematics and Computers in Simulation, Australian Research Council.\\
-\end{tabular*}\\[.2cm]
+Reviewer: Journal of Fluid Mechanics, Journal of Physical Oceanography, Physics of Plasmas, Physics Letters~A, Scientific Reports, Geophysical Research Letters, Fluids, Journal of Advances in Modeling Earth Systems, Mathematics and Computers in Simulation, Australian Research Council.\\[.2cm]
+
+%\begin{tabular*}{\textwidth}{p{1.5cm}c@{\extracolsep{.25cm}}p{12.1cm}}
+%Reviewer & : &  Journal of Fluid Mechanics, Journal of Physical Oceanography, Physics of Plasmas, Physics Letters~A, Scientific Reports, Geophysical Research Letters, Fluids, Journal of Advances in Modeling Earth Systems, Mathematics and Computers in Simulation, Australian Research Council.\\
+%\end{tabular*}\\[.2cm]
 
 \vspace{-2em}\section*{\bf Hobbies}
 
@@ -609,6 +619,24 @@ Cambridge, MA 02138, USA\\
 {\fontspec{Meiryo}{☎}}\hspace{.188cm}\texttt{\href{skype:+16174952998?sms}{+1$\;$(617)$\;$495-2998}}\\
 \hspace{.1em}{\fontspec{Arial Unicode MS}{✉}}\hspace{-.1em}\hspace{.32cm}{\small\href{mailto:farrell@seas.harvard.edu}{farrell@seas.harvard.edu}}\\
 \hspace{.1em}{w}\hspace{.24cm}{\small\href{http://brian-f-farrell.fas.harvard.edu/}{http://brian-f-farrell.fas.harvard.edu}}\end{minipage}\\
+
+% \begin{minipage}[c]{.55\textwidth}
+% \raggedright \textbf{Louis Moresi}\\
+% Research School of Earth Sciences\\
+% Australian National University\\
+% Canberra, ACT 2601, Australia\\
+% {\fontspec{Meiryo}{☎}}\hspace{.188cm}\texttt{\href{skype:+61403331413?sms}{+61$\;$4$\;$03331413}}\\
+% \hspace{.1em}{\fontspec{Arial Unicode MS}{✉}}\hspace{-.1em}\hspace{.32cm}{\small\href{mailto:louis.moresi@anu.edu.au}{louis.moresi@anu.edu.au}}\\
+% \hspace{.1em}{w}\hspace{.24cm}{\small\href{http://www.moresi.info}{http://www.moresi.info}}\end{minipage}%
+% &
+% \begin{minipage}[c]{.48\textwidth}
+% \raggedright \textbf{Michael Roderick}\\
+% Research School of Earth Sciences\\
+% Australian National University\\
+% Canberra, ACT 2601, Australia\\
+% {\fontspec{Meiryo}{☎}}\hspace{.188cm}\texttt{\href{skype:+61261250917?sms}{+61$\;$2$\;$61250917}}\\
+% \hspace{.1em}{\fontspec{Arial Unicode MS}{✉}}\hspace{-.1em}\hspace{.32cm}{\small\href{mailto:michael.roderick@anu.edu.au}{michael.roderick@anu.edu.au}}\\
+% \hspace{.1em}{w}\hspace{.24cm}{\small\href{https://earthsciences.anu.edu.au/people/visiting/emeritus-professor-michael-roderick}{https://bit.ly/em-prof-michael-roderick}}\end{minipage}
 
 
 

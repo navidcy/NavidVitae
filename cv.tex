@@ -27,6 +27,12 @@
 \usetikzlibrary{positioning}
 \usetikzlibrary{calc}
 
+\usepackage[style=numeric-comp, sorting=none, natbib=true, hyperref=true, maxcitenames=6, maxbibnames=6, backref=false, giveninits=false,terseinits=false, backend=biber, sortcites=true,url=false,doi=false,uniquelist=false,uniquename=false]{biblatex}%, uniquename=false
+% sorting=ynt
+\newcommand{\authorcite}[1]{\citeauthor{#1}\,\supercite{#1}}
+\addbibresource{/Users/navid/Dropbox_pji/Dropbox/bibfile/basic_references.bib}
+
+
 \usepackage{comment}
 
 % DOCUMENT LAYOUT
@@ -266,7 +272,7 @@ Exchange through Socrates-Erasmus program during spring semester 2006 at the\\
 
 %\noindent\years{Nov. 2020 -- \\ \mbox{$\;\;\;$}}\textbf{Adjunct Visiting Research Scientist}\\
 %\emph{\href{https://www.ucy.ac.cy/oceanography/en/}{\color{black}Cyprus Oceanography Center}, \href{https://www.ucy.ac.cy/en/}{\color{black}University of Cyprus}, Cyprus}\\[.2cm]
-\noindent\years{June 2021 -- \\ \mbox{$\;\;\;$}}\textbf{\href{https://rms.arc.gov.au/RMS/Report/Download/Report/1b0c8b2e-7bb0-4f2d-8f52-ad207cfbb41d/219}{\color{black}ARC DECRA Research Fellow}}\\
+\noindent\years{June 2021 -- \\ \mbox{$\;\;\;$}}\textbf{\href{https://rms.arc.gov.au/RMS/Report/Download/Report/1b0c8b2e-7bb0-4f2d-8f52-ad207cfbb41d/219}{\color{black}ARC Discovery Early Career Researcher Award (DECRA) Fellow}}\\
 \emph{\href{http://rses.anu.edu.au}{\color{black}Research School of Earth Sciences}, Australian National University, Australia}\\[.2cm]
 \noindent\years{May 2018 -- \\ May 2021}\textbf{Research Fellow}, part of the {\href{http://www.climateextremes.org.au}{{\color{black}ARC Centre of Excellence for Climate Extremes}}}\\
 \emph{\href{http://rses.anu.edu.au}{\color{black}Research School of Earth Sciences}, Australian National University, Australia} (with \amhogg)\\[.2cm]
@@ -347,7 +353,7 @@ Farrell, B. F., Ioannou, P. J., Jim\'enez, J., \textbf{Constantinou, N. C.}, Loz
 \vspace{-1.5em}
 
 
-\subsubsection*{Chapters in Books (refereed)}
+\subsubsection*{\bf Chapters in Books (refereed)}
 \begin{etaremune}
 \item
 \textbf{Constantinou, N. C.}, Ioannou, P. J., and Bakas, N. A. (2016). Structure and stability of low amplitude jet equilibria in barotropic turbulence. In Karacostas, T., Bais, A., and Nastos, T. P. (eds.) \textit{Perspectives on Atmospheric Sciences}, 369-375, Springer International Publishing. \doi{http://dx.doi.org/10.1007/978-3-319-35095-0_52} \pdf{\www/publications/S3T_eckhaus-comecap-2016.pdf}
@@ -357,7 +363,7 @@ Farrell, B. F., Ioannou, P. J., Jim\'enez, J., \textbf{Constantinou, N. C.}, Loz
 
 \vspace{-1.5em}
 
-\subsubsection*{Conference Proceedings (refereed)}
+\subsubsection*{\bf Conference Proceedings (refereed)}
 \begin{etaremune}
 %%{Constantinou, N. C.}, N. A. Bakas and P. J. Ioannou: Equilibration of the jet forming instability in barotropic beta-plane turbulence,  \textit{Geophysical Research Abstracts}, \textbf{18}, EGU2016\mbox{-}2152, 2016.\\[.2cm]
 %%Bakas, N. A., {N. C. Constantinou} and P. J. Ioannou: On the dynamics underlying the emergence of large scale structures in barotropic beta-plane turbulence,  \textit{Geophysical Research Abstracts}, \textbf{18}, EGU2016\mbox{-}2143, 2016.\\[.2cm]
@@ -377,7 +383,7 @@ Bakas, N. A., Ioannou P. J., and \textbf{Constantinou, N. C.} (2014). Emergence 
 
 \vspace{-1.5em}
 
-\subsubsection*{Other publications}
+\subsubsection*{\bf Other publications}
 \begin{etaremune}
 \item
 \textbf{Constantinou, N. C.} (2021). How machine learning is helping us fine-tune climate models to reach unprecedented detail. \textit{The Conversation}, 18th August 2021. \urllink
@@ -396,7 +402,7 @@ Lozano-Dur\'an, A., Karp, M., and \textbf{Constantinou, N. C.} (2018). Wall turb
 
 \vspace{-2em}\section*{\bf Conferences}
 Open-source, reproducible workflow in physical oceanography and geophysical fluid dynamics. \textit{Ocean Sciences Meeting 2022}, Virtual Conference, USA, 27~Feb.-3~Mar~2021. (\textbf{invited talk})\\[.2cm]
-\years{2022} A data-driven approach for developing and calibrating a parameterization for mesoscale eddy fluxes. \textit{Ocean Sciences Meeting 2022}, Virtual Conference, USA, 27~Feb.-3~Mar~2021. (oral)\\[.2cm]
+\years{2022} A data-driven approach for developing and calibrating a parameterization for mesoscale eddy fluxes. \textit{Ocean Sciences Meeting 2022}, Virtual Conference, USA, 27~Feb.-3~Mar~2021. (talk)\\[.2cm]
 \years{2021} A data-driven approach for developing and calibrating a parameterization of the ocean mesoscale eddy fluxes \textit{Conference on ``Machine Learning for Climate''}, KITP, UC Santa Barbara, USA, 1-4~Nov.~2021. (\textbf{invited talk}) \pdf{\www/presentations/KITP_Nov2021.pdf} \href{https://online.kitp.ucsb.edu/online/climate-c21/constantinou/}{\scriptsize\textsc{[video]}}\\[.2cm]
 Cause-and-effect of linear mechanisms in wall turbulence. \textit{73rd APS Division of Fluid Dynamics Meeting}, Chicago, IL, USA, 22-24~Nov.~2020. (virtual talk) \pdf{\www/presentations/APS-DFD-2020.pdf} \href{https://youtu.be/tDV6j9WjhIY}{\scriptsize\textsc{[video]}}\\[.2cm]
 \years{2020} Eddy saturation of the Southern Ocean: a baroclinic versus barotropic perspective. \textit{Ocean Sciences Meeting 2020}, San Diego, CA, USA, 16-21~Feb.~2020. (poster) \pdf{\www/presentations/OSM_Feb2020-poster.pdf}\\[.2cm]
@@ -717,7 +723,6 @@ Sydney, NSW, 2052, Australia\\
 
 \vfill{}
 %\hrulefill
-
 
 \begin{center}
 {\scriptsize  Last updated: \today}
